@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <script
+      src="https://kit.fontawesome.com/edc3ca63c7.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- js link -->
+    <script src="main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <!-- <img src="logo.png" class="logo"> -->
+        <div class="left">
+          <div class="logo">
+            <img src="netflix-img/images/logo.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <div class="middle">
+          <ul id="sidemenu">
+            <li class="sidemenu-items"><a href="#banner">Home</a></li>
+            <li class="sidemenu-items"><a href="#tv">Tv Shows</a></li>
+            <li class="sidemenu-items"><a href="#movies">Movies</a></li>
+            <li class="sidemenu-items"><a href="#np">New & Popular</a></li>
+            <li class="sidemenu-items"><a href="#ml">My List</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+
+        <div class="end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bell"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section starts -->
+    <!-- banner-slider -->
+    <section id="banner">
+      <div class="slide-container">
+        <div class="slide">
+          <a href="https://www.youtube.com/watch?v=bjqEWgDVPe0" target="_blank">
+            <img src="netflix-img/banner-images/gameofthrones.jpg" />
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="https://www.youtube.com/watch?v=oVzVdvGIC7U" target="_blank">
+            <img src="netflix-img/banner-images/peaky.jpg" alt="" srcset="" />
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="https://www.youtube.com/watch?v=_InqQJRqGW4" target="_blank">
+            <img src="netflix-img/banner-images/moneyHeist.webp" />
+          </a>
+        </div>
+
+        <div class="slide">
+          <a href="https://www.youtube.com/watch?v=LTpmw0Ac6Zs" target="_blank">
+            <img
+              src="netflix-img/banner-images/friends.webp"
+              alt=""
+              srcset=""
+            />
+          </a>
+        </div>
+
+        <span class="left-row" onclick="controller(-1)">&#8592;</span>
+        <span class="right-row" onclick="controller(1)">&#8594;</span>
+      </div>
+    </section>
+
+    <section id="tv">
+      <h3 class="title">Tv Shows</h3>
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel">
+          <img
+            src="netflix-img/movies-img/tv1.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv2.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv3.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv4.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv5.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv6.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv7.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv8.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/tv9.PNG"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+    <section id="movies">
+      <h3 class="title">Movies</h3>
+      <div class="wrapper2">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel2">
+          <img
+            src="netflix-img/movies-img/m1.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/m2.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/m3.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/m4.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/m5.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/m6.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o1.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o2.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o3.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o4.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o5.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/o6.PNG"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <section id="np">
+      <h3 class="title">New & Popular</h3>
+      <div class="wrapper3">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel3">
+          <img
+            src="netflix-img/movies-img/p1.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p2.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p3.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p4.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p5.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p6.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p7.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p8.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p9.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p10.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p11.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/p12.PNG"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <section class="ml">
+      <h3 class="title">My List</h3>
+      <div class="wrapper4">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel4">
+          <img
+            src="netflix-img/movies-img/r1.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/r2.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/r3.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/r4.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/r5.PNG"
+            alt="img"
+            draggable="false"
+          />
+          <img
+            src="netflix-img/movies-img/r6.PNG"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <section class="link">
+      <div class="row">
+        <div class="col">
+          <a href="#">FAQ</a>
+          <a href="#">Investor Realtions</a>
+          <a href="#">Privacy</a>
+          <a href="#">Speed Test</a>
+        </div>
+
+        <div class="col">
+          <a href="#">Help center</a>
+          <a href="#">Jobs</a>
+          <a href="#">Cokkies</a>
+          <a href="#">Legal Notices</a>
+        </div>
+
+        <div class="col">
+          <a href="#">Accounts</a>
+          <a href="#">Ways to Watch</a>
+          <a href="#">Corporate Information</a>
+          <a href="#">Only on Netflix</a>
+        </div>
+
+        <div class="col">
+          <a href="#">Media Center</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <!-- END OF LINKS -->
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy 1997-2023 Netflix, Inc.</p>
+      <p>Parth Gupta &copy 2023</p>
+    </footer>
+  </body>
+</html>
